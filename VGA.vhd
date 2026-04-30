@@ -6,6 +6,7 @@ LIBRARY PLL_40MHz          ;
 USE PLL_40MHz.ALL          ;
 USE WORK.basic_package.ALL ;
 USE WORK.VGA_package.ALL   ;
+USE WORK.sprite_pkg.ALL    ;
 -----------------------------------------------------
 ENTITY VGA IS
 	PORT
@@ -26,37 +27,12 @@ SIGNAL VIDEO_ENA  : UINT01  ;
 SIGNAL CLK_40MHz  : UINT01  ;
 SIGNAL PLL_LOCKED : UINT01  ;
 SIGNAL GLOBAL_RST : UINT01  ;
-SIGNAL SCREEN     : SCREEN_T;
+SIGNAL LEAFEON_S  : SPRITE_T;
 SIGNAL POS_X      : UINT11  ;
 SIGNAL POS_Y      : UINT11  ;
 BEGIN
 	
-	PROCESS(VIDEO_ENA, POS_X, POS_Y)
-	VARIABLE TEMP_X : INTEGER;
-	VARIABLE TEMP_Y : INTEGER;
-	BEGIN
-		TEMP_X := Slv2Int(POS_X);
-		TEMP_Y := Slv2Int(POS_Y);
-		IF VIDEO_ENA = '1' THEN
-			IF (Slv2Int(POS_X)) < 200 THEN
-				SCREEN(TEMP_Y)(TEMP_X).R <= X"FF";
-				SCREEN(TEMP_Y)(TEMP_X).G <= X"00"; 
-				SCREEN(TEMP_Y)(TEMP_X).B <= X"00";
-			ELSIF (Slv2Int(POS_X)) < 400 THEN
-				SCREEN(TEMP_Y)(TEMP_X).R <= X"00";
-				SCREEN(TEMP_Y)(TEMP_X).G <= X"FF";
-				SCREEN(TEMP_Y)(TEMP_X).B <= X"00";
-			ELSIF (Slv2Int(POS_X)) < 600 THEN
-				SCREEN(TEMP_Y)(TEMP_X).R <= X"00";
-				SCREEN(TEMP_Y)(TEMP_X).G <= X"00";
-				SCREEN(TEMP_Y)(TEMP_X).B <= X"FF";
-			ELSE
-				SCREEN(TEMP_Y)(TEMP_X).R <= X"FF";
-				SCREEN(TEMP_Y)(TEMP_X).G <= X"FF";
-				SCREEN(TEMP_Y)(TEMP_X).B <= X"FF";
-			END IF;
-		END IF;
-	END PROCESS;
+	LEAFEON_S <= LEAFEON;
 	
 	VGA_CLK    <= CLK_40MHz            ;
 	GLOBAL_RST <= (NOT PLL_LOCKED) OR VGA_RST;
@@ -85,7 +61,7 @@ BEGIN
 	COLOR_BLOCK : ENTITY WORK.pixel_generate
 	PORT MAP
 	(
-		SCREEN_MAT => SCREEN   ,
+		SCREEN_MAT => LEAFEON_S,
 		POS_X      => POS_X    ,
 		POS_Y      => POS_Y    ,
 		VIDEO_ON   => VIDEO_ENA,
