@@ -6,7 +6,7 @@ LIBRARY PLL_40MHz          ;
 USE PLL_40MHz.ALL          ;
 USE WORK.basic_package.ALL ;
 USE WORK.VGA_package.ALL   ;
-USE WORK.sprite_pkg.ALL    ;
+--USE WORK.sprite_pkg.ALL    ; --/////////////////////////
 -----------------------------------------------------
 ENTITY VGA IS
 	PORT
@@ -27,12 +27,18 @@ SIGNAL VIDEO_ENA  : UINT01  ;
 SIGNAL CLK_40MHz  : UINT01  ;
 SIGNAL PLL_LOCKED : UINT01  ;
 SIGNAL GLOBAL_RST : UINT01  ;
-SIGNAL LEAFEON_S  : SPRITE_T;
+--SIGNAL LEAFEON_S  : SPRITE_T; --////////////////////////////
+SIGNAL S_POS_X    : UINT11  ;
+SIGNAL S_POS_Y    : UINT11  ;
 SIGNAL POS_X      : UINT11  ;
 SIGNAL POS_Y      : UINT11  ;
 BEGIN
 	
-	LEAFEON_S <= LEAFEON;
+--	LEAFEON_S <= LEAFEON;
+	
+	S_POS_X <= Int2Slv(600, 11);
+	S_POS_Y <= Int2Slv(400, 11);
+	
 	
 	VGA_CLK    <= CLK_40MHz            ;
 	GLOBAL_RST <= (NOT PLL_LOCKED) OR VGA_RST;
@@ -61,13 +67,16 @@ BEGIN
 	COLOR_BLOCK : ENTITY WORK.pixel_generate
 	PORT MAP
 	(
-		SCREEN_MAT => LEAFEON_S,
-		POS_X      => POS_X    ,
-		POS_Y      => POS_Y    ,
-		VIDEO_ON   => VIDEO_ENA,
-		R          => R_VGA    ,
-		G          => G_VGA    ,
-		B          => B_VGA
+		CLK          => CLK_40MHz,
+	--	SCREEN_MAT   => LEAFEON_S, --/////////////////////////
+		SPRITE_POS_X => S_POS_X  ,
+		SPRITE_POS_Y => S_POS_Y  ,
+		POS_X        => POS_X    ,
+		POS_Y        => POS_Y    ,
+		VIDEO_ON     => VIDEO_ENA,
+		R            => R_VGA    ,
+		G            => G_VGA    ,
+		B            => B_VGA
 	);
 	
 END ARCHITECTURE call;

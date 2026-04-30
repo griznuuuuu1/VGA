@@ -1,31 +1,27 @@
 from PIL import Image
 
-img = Image.open("leafeon.png").resize((128, 128))
+WIDTH = 128
+HEIGHT = 128
+
+img = Image.open("leafeon.png").resize((WIDTH, HEIGHT))
 img = img.convert("RGB")
 
-with open("sprite_pkg.vhd", "w") as f:
-    f.write("LIBRARY IEEE;\n")
-    f.write("USE IEEE.STD_LOGIC_1164.ALL;\n\n")
-    f.write("USE WORK.basic_package.ALL;\n\n")
-    f.write("PACKAGE sprite_pkg IS\n\n")
-    f.write("    CONSTANT SPRITE : SPRITE_T := (\n")
+with open("sprite.mif", "w") as f:
+    f.write(f"WIDTH=24;\n")
+    f.write(f"DEPTH={WIDTH*HEIGHT};\n\n")
 
-    for y in range(128):
-        f.write("        (\n")
-        for x in range(128):
+    f.write("ADDRESS_RADIX=UNS;\n")
+    f.write("DATA_RADIX=UNS;\n\n")
+    f.write("CONTENT BEGIN\n")
+
+    addr = 0
+    for y in range(HEIGHT):
+        for x in range(WIDTH):
             r, g, b = img.getpixel((x, y))
 
-            f.write(f"            (R => x\"{r:02X}\", G => x\"{g:02X}\", B => x\"{b:02X}\")")
+            value = (r << 16) | (g << 8) | b
 
-            if x != 127:
-                f.write(",\n")
-            else:
-                f.write("\n")
+            f.write(f"{addr} : {value};\n")
+            addr += 1
 
-        if y != 127:
-            f.write("        ),\n")
-        else:
-            f.write("        )\n")
-
-    f.write("    );\n\n")
-    f.write("END PACKAGE;\n")
+    f.write("END;\n")
