@@ -110,6 +110,22 @@
 				{
 					"name" : "VGA_RST",
 					"strict" : false
+				},
+				{
+					"name" : "UP_SIG",
+					"strict" : false
+				},
+				{
+					"name" : "DOWN_SIG",
+					"strict" : false
+				},
+				{
+					"name" : "LEFT_SIG",
+					"strict" : false
+				},
+				{
+					"name" : "RIGHT_SIG",
+					"strict" : false
 				}
 			]
 		}

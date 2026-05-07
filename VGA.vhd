@@ -6,13 +6,18 @@ LIBRARY PLL_40MHz          ;
 USE PLL_40MHz.ALL          ;
 USE WORK.basic_package.ALL ;
 USE WORK.VGA_package.ALL   ;
---USE WORK.sprite_pkg.ALL    ; --/////////////////////////
 -----------------------------------------------------
 ENTITY VGA IS
 	PORT
 	(
 		CLK       : IN  UINT01;
 		VGA_RST   : IN  UINT01;
+		
+		LEFT_SIG  : IN  UINT01;
+		RIGHT_SIG : IN  UINT01;
+		UP_SIG    : IN  UINT01;
+		DOWN_SIG  : IN  UINT01;
+		
 		VGA_CLK   : OUT UINT01;
 		R_VGA     : OUT UINT08;
 		G_VGA     : OUT UINT08;
@@ -23,21 +28,35 @@ ENTITY VGA IS
 END ENTITY VGA;
 -----------------------------------------------------
 ARCHITECTURE call OF VGA IS
-SIGNAL VIDEO_ENA  : UINT01  ;
-SIGNAL CLK_40MHz  : UINT01  ;
-SIGNAL PLL_LOCKED : UINT01  ;
-SIGNAL GLOBAL_RST : UINT01  ;
---SIGNAL LEAFEON_S  : SPRITE_T; --////////////////////////////
-SIGNAL S_POS_X    : UINT11  ;
-SIGNAL S_POS_Y    : UINT11  ;
-SIGNAL POS_X      : UINT11  ;
-SIGNAL POS_Y      : UINT11  ;
+SIGNAL VIDEO_ENA    : UINT01  ;
+SIGNAL CLK_40MHz    : UINT01  ;
+SIGNAL PLL_LOCKED   : UINT01  ;
+SIGNAL GLOBAL_RST   : UINT01  ;
+SIGNAL S_POS_X      : UINT11  ;
+SIGNAL S_POS_Y      : UINT11  ;
+SIGNAL POS_X        : UINT11  ;
+SIGNAL POS_Y        : UINT11  ;
 BEGIN
 	
---	LEAFEON_S <= LEAFEON;
+	MOVE_CONT : ENTITY WORK.move_controller
+	GENERIC MAP
+	(
+		REFRESH_RATE => 500000
+	)
+	PORT MAP
+	(
+		CLK   => CLK_40MHz ,
+		RST   => GLOBAL_RST,
+		L_SIG => LEFT_SIG  ,
+		R_SIG => RIGHT_SIG ,
+		U_SIG => UP_SIG    ,
+		D_SIG => DOWN_SIG  ,
+		SP_X  => S_POS_X   ,
+		SP_Y  => S_POS_Y
+	);
 	
-	S_POS_X <= Int2Slv(600, 11);
-	S_POS_Y <= Int2Slv(400, 11);
+	--S_POS_X <= VARP_X; --Int2Slv(300, 11);
+	--S_POS_Y <= VARP_Y; --Int2Slv(200, 11);
 	
 	
 	VGA_CLK    <= CLK_40MHz            ;
@@ -68,7 +87,6 @@ BEGIN
 	PORT MAP
 	(
 		CLK          => CLK_40MHz,
-	--	SCREEN_MAT   => LEAFEON_S, --/////////////////////////
 		SPRITE_POS_X => S_POS_X  ,
 		SPRITE_POS_Y => S_POS_Y  ,
 		POS_X        => POS_X    ,

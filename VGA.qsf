@@ -90,6 +90,13 @@ set_location_assignment PIN_AF14 -to CLK
 set_location_assignment PIN_AB12 -to VGA_RST
 set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_location_assignment PIN_AA14 -to DOWN_SIG
+set_location_assignment PIN_Y16 -to LEFT_SIG
+set_location_assignment PIN_W15 -to RIGHT_SIG
+set_location_assignment PIN_AA15 -to UP_SIG
+set_global_assignment -name VHDL_FILE move_controller.vhd
+set_global_assignment -name VHDL_FILE bit1_fullAdder.vhd
+set_global_assignment -name VHDL_FILE bitn_fullAdder.vhd
 set_global_assignment -name VHDL_FILE VGA.vhd
 set_global_assignment -name VHDL_FILE pixel_generate.vhd
 set_global_assignment -name VHDL_FILE image_sync.vhd
