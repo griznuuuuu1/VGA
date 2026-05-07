@@ -3,10 +3,10 @@ from PIL import Image
 WIDTH = 128
 HEIGHT = 128
 
-img = Image.open("leafeon.png").resize((WIDTH, HEIGHT))
+img = Image.open("charizard.jpeg").resize((WIDTH, HEIGHT))
 img = img.convert("RGB")
 
-with open("sprite.mif", "w") as f:
+with open("charizard.mif", "w") as f:
     f.write(f"WIDTH=24;\n")
     f.write(f"DEPTH={WIDTH*HEIGHT};\n\n")
 
