@@ -4,18 +4,6 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "R_VGA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "R_VGA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "R_VGA[2]",
-					"strict" : false
-				},
-				{
 					"name" : "R_VGA[3]",
 					"strict" : false
 				},
@@ -33,14 +21,6 @@
 				},
 				{
 					"name" : "R_VGA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "G_VGA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "G_VGA[1]",
 					"strict" : false
 				},
 				{
@@ -65,18 +45,6 @@
 				},
 				{
 					"name" : "G_VGA[7]",
-					"strict" : false
-				},
-				{
-					"name" : "B_VGA[0]",
-					"strict" : false
-				},
-				{
-					"name" : "B_VGA[1]",
-					"strict" : false
-				},
-				{
-					"name" : "B_VGA[2]",
 					"strict" : false
 				},
 				{
@@ -112,11 +80,35 @@
 					"strict" : false
 				},
 				{
-					"name" : "UP_SIG",
+					"name" : "POKE0_SEL[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DOWN_SIG",
+					"name" : "POKE0_SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE0_SEL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE0_SEL[3]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE1_SEL[0]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE1_SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE1_SEL[2]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE1_SEL[3]",
 					"strict" : false
 				},
 				{
@@ -125,6 +117,14 @@
 				},
 				{
 					"name" : "RIGHT_SIG",
+					"strict" : false
+				},
+				{
+					"name" : "UP_SIG",
+					"strict" : false
+				},
+				{
+					"name" : "DOWN_SIG",
 					"strict" : false
 				}
 			]

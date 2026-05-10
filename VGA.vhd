@@ -12,11 +12,14 @@ ENTITY VGA IS
 	(
 		CLK       : IN  UINT01;
 		VGA_RST   : IN  UINT01;
-		
 		LEFT_SIG  : IN  UINT01;
 		RIGHT_SIG : IN  UINT01;
 		UP_SIG    : IN  UINT01;
 		DOWN_SIG  : IN  UINT01;
+		
+		--ENTRADAS DE TEST
+		POKE0_SEL : IN  UINT04;
+		POKE1_SEL : IN  UINT04;
 		
 		VGA_CLK   : OUT UINT01;
 		R_VGA     : OUT UINT08;
@@ -86,15 +89,19 @@ BEGIN
 	COLOR_BLOCK : ENTITY WORK.pixel_generate
 	PORT MAP
 	(
-		CLK          => CLK_40MHz,
-		SPRITE_POS_X => S_POS_X  ,
-		SPRITE_POS_Y => S_POS_Y  ,
-		POS_X        => POS_X    ,
-		POS_Y        => POS_Y    ,
-		VIDEO_ON     => VIDEO_ENA,
-		R            => R_VGA    ,
-		G            => G_VGA    ,
-		B            => B_VGA
+		CLK           => CLK_40MHz,
+		SPRITE0_POS_X => S_POS_X  ,
+		SPRITE0_POS_Y => S_POS_Y  ,
+		POS_X         => POS_X    ,
+		POS_Y         => POS_Y    ,
+		PK0_SELECTOR  => POKE0_SEL,
+		PK1_SELECTOR  => POKE1_SEL,
+		POKEMON0_ENA  => '1'      ,
+		POKEMON1_ENA  => '1'      ,
+		VIDEO_ON      => VIDEO_ENA,
+		R             => R_VGA    ,
+		G             => G_VGA    ,
+		B             => B_VGA
 	);
 	
 END ARCHITECTURE call;
