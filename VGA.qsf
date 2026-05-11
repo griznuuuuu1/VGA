@@ -114,15 +114,16 @@ set_global_assignment -name VHDL_FILE basic_package.vhd
 set_global_assignment -name VHDL_FILE VGA_package.vhd
 set_global_assignment -name QIP_FILE PLL_40MHz.qip
 set_global_assignment -name SIP_FILE PLL_40MHz.sip
-set_global_assignment -name QIP_FILE LEAFEON_ROM.qip
 set_global_assignment -name QIP_FILE ZERAORA_ROM.qip
 set_global_assignment -name QIP_FILE VAPOREON_ROM.qip
 set_global_assignment -name QIP_FILE SANDSLASH_ROM.qip
+set_global_assignment -name QIP_FILE RANDOM_ROM.qip
 set_global_assignment -name QIP_FILE ODDISH_ROM.qip
+set_global_assignment -name QIP_FILE LEAFEON_ROM.qip
 set_global_assignment -name QIP_FILE LAPRAS_ROM.qip
 set_global_assignment -name QIP_FILE JOLTEON_ROM.qip
 set_global_assignment -name QIP_FILE GARCHOMP_ROM.qip
 set_global_assignment -name QIP_FILE FLAREON_ROM.qip
 set_global_assignment -name QIP_FILE CHARIZARD_ROM.qip
-set_global_assignment -name QIP_FILE RANDOM_ROM.qip
+set_global_assignment -name QIP_FILE BACKGROUND_ROM.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

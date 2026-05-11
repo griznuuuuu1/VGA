@@ -11,44 +11,138 @@ ENTITY move_controller IS
 	);
 	PORT
 	(
-		CLK    : IN  UINT01;
-		RST    : IN  UINT01;
-		L_SIG  : IN  UINT01;
-		R_SIG  : IN  UINT01;
-		U_SIG  : IN  UINT01;
-		D_SIG  : IN  UINT01;
-		SP_X   : OUT UINT11;
-		SP_Y   : OUT UINT11
+		CLK          : IN  UINT01;
+		RST          : IN  UINT01;
+	--	L_SIG        : IN  UINT01;
+	--	R_SIG        : IN  UINT01;
+		PK0_MOV_CONT : IN  UINT01;
+		PK1_MOV_CONT : IN  UINT01;
+		SP0_X        : OUT UINT11;
+		SP0_Y        : OUT UINT11;
+		SP1_X        : OUT UINT11;
+		SP1_Y        : OUT UINT11
 	);
 END ENTITY move_controller;
 ------------------------------------------------------
 ARCHITECTURE sinchronous OF move_controller IS
-SIGNAL VARP_X   : UINT11               ;
-SIGNAL VARP_Y   : UINT11               ;
-SIGNAL LR_OP        : UINT11           ;
-SIGNAL UD_OP        : UINT11           ;
-SIGNAL MV_X         : UINT02           ;
-SIGNAL MV_Y         : UINT02           ;
-SIGNAL P_FF_X       : UINT11           ;
-SIGNAL P_FF_Y       : UINT11           ;
-SIGNAL REFRESH_FLAG : UINT01           ;
+SIGNAL I_POS0_X_INT : INTEGER := 150;
+SIGNAL I_POS0_Y_INT : INTEGER := 400;
+SIGNAL I_POS1_X_INT : INTEGER := 520;
+SIGNAL I_POS1_Y_INT : INTEGER := 260;
+SIGNAL I_POS0_X_SLV : UINT11        ;
+SIGNAL I_POS0_Y_SLV : UINT11        ;
+SIGNAL I_POS1_X_SLV : UINT11        ;
+SIGNAL I_POS1_Y_SLV : UINT11        ;
+SIGNAL POS0_X_RST   : UINT01 := '0' ;
+SIGNAL POS0_Y_RST   : UINT01 := '0' ;
+SIGNAL POS1_X_RST   : UINT01 := '0' ;
+SIGNAL POS1_Y_RST   : UINT01 := '0' ;
+SIGNAL VARP0_X      : UINT11        ;
+SIGNAL VARP0_Y      : UINT11        ;
+SIGNAL VARP1_X      : UINT11        ;
+SIGNAL VARP1_Y      : UINT11        ;
+SIGNAL LR0_OP       : UINT11        ;
+SIGNAL UD0_OP       : UINT11        ;
+SIGNAL LR1_OP       : UINT11        ;
+SIGNAL UD1_OP       : UINT11        ;
+SIGNAL MV0_X        : UINT02 := "00";
+SIGNAL MV0_Y        : UINT02 := "00";
+SIGNAL MV1_X        : UINT02 := "00";
+SIGNAL MV1_Y        : UINT02 := "00";
+SIGNAL P0_FF_X      : UINT11        ;
+SIGNAL P0_FF_Y      : UINT11        ;
+SIGNAL P1_FF_X      : UINT11        ;
+SIGNAL P1_FF_Y      : UINT11        ;
+SIGNAL REFRESH_FLAG : UINT01        ;
 BEGIN
 	
-	SP_X <= VARP_X;
-	SP_Y <= VARP_Y;
+	SP0_X <= VARP0_X;
+	SP0_Y <= VARP0_Y;
+	SP1_X <= VARP1_X;
+	SP1_Y <= VARP1_Y;
 	
-	MV_X <= L_SIG & R_SIG;
-	MV_Y <= U_SIG & D_SIG;
+	I_POS0_X_SLV <= Int2Slv(I_POS0_X_INT, 11);
+	I_POS0_Y_SLV <= Int2Slv(I_POS0_Y_INT, 11);
+	I_POS1_X_SLV <= Int2Slv(I_POS1_X_INT, 11);
+	I_POS1_Y_SLV <= Int2Slv(I_POS1_Y_INT, 11);
 	
-	WITH MV_X SELECT
-		LR_OP <= "00000000001"   WHEN "01"  ,
-				 (OTHERS => '1') WHEN "10"  ,
-				 (OTHERS => '0') WHEN OTHERS;
+	PROCESS(CLK)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			CASE PK0_MOV_CONT IS
+				WHEN '0'    =>
+					CASE (REFRESH_FLAG & MV0_Y) IS
+						WHEN "000" => NULL;
+							
+						WHEN "100" =>
+							MV0_Y      <=  "01";
+							POS0_Y_RST <=   '0';
+						WHEN "001" => NULL;
+							
+						WHEN "101" =>
+							MV0_Y      <=  "10";
+							POS0_Y_RST <=   '0';
+						WHEN "010" => NULL;
+							
+						WHEN "110" =>
+							MV0_Y      <=  "00";
+							POS0_Y_RST <=   '0';
+						WHEN OTHERS =>
+							MV0_Y      <=  "00";
+							POS0_Y_RST <=   '0';
+					END CASE;
+				WHEN OTHERS => 
+					MV0_Y      <= "00";
+					POS0_Y_RST <=  '1';
+			END CASE;
+			CASE PK1_MOV_CONT IS
+				WHEN '0'    =>
+					CASE (REFRESH_FLAG & MV1_Y) IS
+						WHEN "000" => NULL;
+							
+						WHEN "100" =>
+							MV1_Y      <=  "01";
+							POS1_Y_RST <=  '0';
+						WHEN "001" => NULL;
+							
+						WHEN "101" =>
+							MV1_Y      <=  "10";
+							POS1_Y_RST <=  '0';
+						WHEN "010" => NULL;
+							
+						WHEN "110" =>
+							MV1_Y      <=  "00";
+							POS1_Y_RST <=   '0';
+						WHEN OTHERS =>
+							MV1_Y      <=  "00";
+							POS1_Y_RST <=   '0';
+					END CASE;
+				WHEN OTHERS =>
+					MV1_Y      <= "00";
+					POS1_Y_RST <=  '1';
+			END CASE;
+		END IF;
+	END PROCESS;
 	
-	WITH MV_Y SELECT
-		UD_OP <= "00000000001"   WHEN "01"  ,
-				 (OTHERS => '1') WHEN "10"  ,
-				 (OTHERS => '0') WHEN OTHERS;
+	WITH MV0_X SELECT
+		LR0_OP <= "00000001010"   WHEN "01"  ,
+				  "11111110110"   WHEN "10"  ,
+				  (OTHERS => '0') WHEN OTHERS;
+	
+	WITH MV0_Y SELECT
+		UD0_OP <= "00000001010"   WHEN "01"  ,
+				  "11111110110"   WHEN "10"  ,
+				  (OTHERS => '0') WHEN OTHERS;
+	
+	WITH MV1_X SELECT
+		LR1_OP <= "00000001010"   WHEN "01"  ,
+				  "11111110110"   WHEN "10"  ,
+				  (OTHERS => '0') WHEN OTHERS;
+	
+	WITH MV1_Y SELECT
+		UD1_OP <= "00000001010"   WHEN "01"  ,
+				  "11111110110"   WHEN "10"  ,
+				  (OTHERS => '0') WHEN OTHERS;
 	
 	REFRESH_C : ENTITY WORK.contador_uni
 	GENERIC MAP
@@ -71,14 +165,13 @@ BEGIN
 	PROCESS(CLK, REFRESH_FLAG)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
-			IF RST = '1' THEN
-				VARP_X <= "00000000000";
+			IF (RST = '1') OR (POS0_X_RST = '1') THEN
+				VARP0_X <= I_POS0_X_SLV;
 			ELSE
 				IF REFRESH_FLAG = '1' THEN
-					VARP_X     <= P_FF_X;
-					--TMP_VARP_X <= P_FF_X;
+					VARP0_X     <= P0_FF_X;
 				ELSE
-					VARP_X <= VARP_X;
+					VARP0_X <= VARP0_X;
 				END IF;
 			END IF;
 		END IF;
@@ -87,55 +180,102 @@ BEGIN
 	PROCESS(CLK, REFRESH_FLAG)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
-			IF RST = '1' THEN
-				VARP_Y <= "00000000000";
+			IF (RST = '1') OR (POS0_Y_RST = '1') THEN
+				VARP0_Y <= I_POS0_Y_SLV;
 			ELSE
 				IF REFRESH_FLAG = '1' THEN
-					VARP_Y     <= P_FF_Y;
-					--TMP_VARP_Y <= P_FF_Y;
+					VARP0_Y     <= P0_FF_Y;
 				ELSE
-					VARP_Y <= VARP_Y;
+					VARP0_Y <= VARP0_Y;
 				END IF;
 			END IF;
 		END IF;
 	END PROCESS;
 	
---	WITH MV_X SELECT
---		LR_OP <= "00000000001" WHEN "01"  ,
---				 "11111111111" WHEN "10"  ,
---				 "00000000000" WHEN OTHERS;
---	
---	WITH MV_Y SELECT
---		UD_OP <= "00000000001" WHEN "01"  ,
---				 "11111111111" WHEN "10"  ,
---				 "00000000000" WHEN OTHERS;
+	PROCESS(CLK, REFRESH_FLAG)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			IF (RST = '1') OR (POS1_X_RST = '1') THEN
+				VARP1_X <= I_POS1_X_SLV;
+			ELSE
+				IF REFRESH_FLAG = '1' THEN
+					VARP1_X     <= P1_FF_X;
+				ELSE
+					VARP1_X <= VARP1_X;
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
 	
-	POS_X_SUM : ENTITY WORK.bitn_fullAdder
+	PROCESS(CLK, REFRESH_FLAG)
+	BEGIN
+		IF RISING_EDGE(CLK) THEN
+			IF (RST = '1') OR (POS1_Y_RST = '1') THEN
+				VARP1_Y <= I_POS1_Y_SLV;
+			ELSE
+				IF REFRESH_FLAG = '1' THEN
+					VARP1_Y     <= P1_FF_Y;
+				ELSE
+					VARP1_Y <= VARP1_Y;
+				END IF;
+			END IF;
+		END IF;
+	END PROCESS;
+
+	POS0_X_SUM : ENTITY WORK.bitn_fullAdder
 	GENERIC MAP
 	(
 		B_LENGTH => 11
 	)
 	PORT MAP
 	(
-		A    => VARP_X,
-		B    => LR_OP ,
-		Cin  =>'0'    ,
-		Cout => OPEN  ,
-		S    => P_FF_X
+		A    => VARP0_X,
+		B    => LR0_OP ,
+		Cin  =>'0'     ,
+		Cout => OPEN   ,
+		S    => P0_FF_X
 	);
 	
-	POS_Y_SUM : ENTITY WORK.bitn_fullAdder
+	POS0_Y_SUM : ENTITY WORK.bitn_fullAdder
 	GENERIC MAP
 	(
 		B_LENGTH => 11
 	)
 	PORT MAP
 	(
-		A    => VARP_Y,
-		B    => UD_OP ,
-		Cin  => '0'   ,
-		Cout => OPEN  ,
-		S    => P_FF_Y
+		A    => VARP0_Y,
+		B    => UD0_OP ,
+		Cin  => '0'    ,
+		Cout => OPEN   ,
+		S    => P0_FF_Y
+	);
+	
+	POS1_X_SUM : ENTITY WORK.bitn_fullAdder
+	GENERIC MAP
+	(
+		B_LENGTH => 11
+	)
+	PORT MAP
+	(
+		A    => VARP1_X,
+		B    => LR1_OP ,
+		Cin  =>'0'     ,
+		Cout => OPEN   ,
+		S    => P1_FF_X
+	);
+	
+	POS1_Y_SUM : ENTITY WORK.bitn_fullAdder
+	GENERIC MAP
+	(
+		B_LENGTH => 11
+	)
+	PORT MAP
+	(
+		A    => VARP1_Y,
+		B    => UD1_OP ,
+		Cin  => '0'    ,
+		Cout => OPEN   ,
+		S    => P1_FF_Y
 	);
 END ARCHITECTURE sinchronous;
 ------------------------------------------------------

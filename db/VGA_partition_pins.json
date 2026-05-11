@@ -80,11 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "POKE0_SEL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "POKE0_SEL[1]",
+					"name" : "POKE0_SEL[3]",
 					"strict" : false
 				},
 				{
@@ -92,19 +88,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "POKE0_SEL[3]",
+					"name" : "POKE0_SEL[1]",
 					"strict" : false
 				},
 				{
-					"name" : "POKE1_SEL[0]",
-					"strict" : false
-				},
-				{
-					"name" : "POKE1_SEL[1]",
-					"strict" : false
-				},
-				{
-					"name" : "POKE1_SEL[2]",
+					"name" : "POKE0_SEL[0]",
 					"strict" : false
 				},
 				{
@@ -112,11 +100,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "LEFT_SIG",
+					"name" : "POKE1_SEL[2]",
 					"strict" : false
 				},
 				{
-					"name" : "RIGHT_SIG",
+					"name" : "POKE1_SEL[1]",
+					"strict" : false
+				},
+				{
+					"name" : "POKE1_SEL[0]",
 					"strict" : false
 				},
 				{

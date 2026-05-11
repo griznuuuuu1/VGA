@@ -1,12 +1,11 @@
 from PIL import Image
 
-WIDTH = 128
-HEIGHT = 128
-
-img = Image.open("charizard.jpeg").resize((WIDTH, HEIGHT))
+WIDTH = 64
+HEIGHT = 64
+img = Image.open("azu_leafeon.jpeg").resize((WIDTH, HEIGHT))
 img = img.convert("RGB")
 
-with open("charizard.mif", "w") as f:
+with open("leafeon.mif", "w") as f:
 
     f.write(f"WIDTH=16;\n")
     f.write(f"DEPTH={WIDTH*HEIGHT};\n\n")

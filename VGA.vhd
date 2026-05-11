@@ -35,8 +35,10 @@ SIGNAL VIDEO_ENA    : UINT01  ;
 SIGNAL CLK_40MHz    : UINT01  ;
 SIGNAL PLL_LOCKED   : UINT01  ;
 SIGNAL GLOBAL_RST   : UINT01  ;
-SIGNAL S_POS_X      : UINT11  ;
-SIGNAL S_POS_Y      : UINT11  ;
+SIGNAL S0_POS_X     : UINT11  ;
+SIGNAL S0_POS_Y     : UINT11  ;
+SIGNAL S1_POS_X     : UINT11  ;
+SIGNAL S1_POS_Y     : UINT11  ;
 SIGNAL POS_X        : UINT11  ;
 SIGNAL POS_Y        : UINT11  ;
 BEGIN
@@ -44,18 +46,20 @@ BEGIN
 	MOVE_CONT : ENTITY WORK.move_controller
 	GENERIC MAP
 	(
-		REFRESH_RATE => 500000
+		REFRESH_RATE => 50000000
 	)
 	PORT MAP
 	(
-		CLK   => CLK_40MHz ,
-		RST   => GLOBAL_RST,
-		L_SIG => LEFT_SIG  ,
-		R_SIG => RIGHT_SIG ,
-		U_SIG => UP_SIG    ,
-		D_SIG => DOWN_SIG  ,
-		SP_X  => S_POS_X   ,
-		SP_Y  => S_POS_Y
+		CLK           => CLK_40MHz ,
+		RST           => GLOBAL_RST,
+	--	L_SIG         => LEFT_SIG  ,
+	--	R_SIG         => RIGHT_SIG ,
+		PK0_MOV_CONT  => UP_SIG    ,
+		PK1_MOV_CONT  => DOWN_SIG  ,
+		SP0_X         => S0_POS_X  ,
+		SP0_Y         => S0_POS_Y  ,
+		SP1_X         => S1_POS_X  ,
+		SP1_Y         => S1_POS_Y  
 	);
 	
 	--S_POS_X <= VARP_X; --Int2Slv(300, 11);
@@ -90,8 +94,10 @@ BEGIN
 	PORT MAP
 	(
 		CLK           => CLK_40MHz,
-		SPRITE0_POS_X => S_POS_X  ,
-		SPRITE0_POS_Y => S_POS_Y  ,
+		SPRITE0_POS_X => S0_POS_X ,
+		SPRITE0_POS_Y => S0_POS_Y ,
+		SPRITE1_POS_X => S1_POS_X ,
+		SPRITE1_POS_Y => S1_POS_Y ,
 		POS_X         => POS_X    ,
 		POS_Y         => POS_Y    ,
 		PK0_SELECTOR  => POKE0_SEL,
