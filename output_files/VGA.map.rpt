@@ -1,5 +1,5 @@
 Analysis & Synthesis report for VGA
-Mon May 11 00:46:18 2026
+Tue May 12 09:36:43 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -16,56 +16,58 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP|altsyncram:altsyncram_component|altsyncram_5224:auto_generated
- 15. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ZERAORA_ROM:ZERAORA_SP|altsyncram:altsyncram_component|altsyncram_v224:auto_generated
- 16. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|VAPOREON_ROM:VAPOREON_SP|altsyncram:altsyncram_component|altsyncram_l624:auto_generated
- 17. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|SANDSLASH_ROM:SANDSLASH_SP|altsyncram:altsyncram_component|altsyncram_c924:auto_generated
- 18. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ODDISH_ROM:ODDISH_SP|altsyncram:altsyncram_component|altsyncram_6v14:auto_generated
- 19. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LAPRAS_ROM:LAPRAS_SP|altsyncram:altsyncram_component|altsyncram_ev14:auto_generated
- 20. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|JOLTEON_ROM:JOLTEON_SP|altsyncram:altsyncram_component|altsyncram_6324:auto_generated
- 21. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|GARCHOMP_ROM:GARCHOMP_SP|altsyncram:altsyncram_component|altsyncram_s524:auto_generated
- 22. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|FLAREON_ROM:FLAREON_SP|altsyncram:altsyncram_component|altsyncram_i224:auto_generated
- 23. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|CHARIZARD_ROM:CHARIZARD_SP|altsyncram:altsyncram_component|altsyncram_3924:auto_generated
- 24. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|RANDOM_ROM:RANDOM_SP|altsyncram:altsyncram_component|altsyncram_cv14:auto_generated
- 25. Source assignments for pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP|altsyncram:altsyncram_component|altsyncram_cb34:auto_generated
- 26. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT
- 27. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C
- 28. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM
- 29. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM
- 30. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM
- 31. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM
- 32. Parameter Settings for User Entity Instance: PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst|altera_pll:altera_pll_i
- 33. Parameter Settings for User Entity Instance: image_sync:SYNC_BLOCK|contador_uni:H_COUNTER
- 34. Parameter Settings for User Entity Instance: image_sync:SYNC_BLOCK|contador_uni:V_COUNTER
- 35. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ZERAORA_ROM:ZERAORA_SP|altsyncram:altsyncram_component
- 37. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|VAPOREON_ROM:VAPOREON_SP|altsyncram:altsyncram_component
- 38. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|SANDSLASH_ROM:SANDSLASH_SP|altsyncram:altsyncram_component
- 39. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ODDISH_ROM:ODDISH_SP|altsyncram:altsyncram_component
- 40. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LAPRAS_ROM:LAPRAS_SP|altsyncram:altsyncram_component
- 41. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|JOLTEON_ROM:JOLTEON_SP|altsyncram:altsyncram_component
- 42. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|GARCHOMP_ROM:GARCHOMP_SP|altsyncram:altsyncram_component
- 43. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|FLAREON_ROM:FLAREON_SP|altsyncram:altsyncram_component
- 44. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|CHARIZARD_ROM:CHARIZARD_SP|altsyncram:altsyncram_component
- 45. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|RANDOM_ROM:RANDOM_SP|altsyncram:altsyncram_component
- 46. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP|altsyncram:altsyncram_component
- 47. Parameter Settings for Inferred Entity Instance: pixel_generate:COLOR_BLOCK|lpm_divide:Div0
- 48. Parameter Settings for Inferred Entity Instance: pixel_generate:COLOR_BLOCK|lpm_divide:Div1
- 49. altsyncram Parameter Settings by Entity Instance
- 50. Port Connectivity Checks: "pixel_generate:COLOR_BLOCK"
- 51. Port Connectivity Checks: "image_sync:SYNC_BLOCK|contador_uni:V_COUNTER"
- 52. Port Connectivity Checks: "image_sync:SYNC_BLOCK|contador_uni:H_COUNTER"
- 53. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM"
- 54. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM"
- 55. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM"
- 56. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM"
- 57. Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C"
- 58. Post-Synthesis Netlist Statistics for Top Partition
- 59. Elapsed Time Per Partition
- 60. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP|altsyncram:altsyncram_component|altsyncram_5224:auto_generated
+ 16. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ZERAORA_ROM:ZERAORA_SP|altsyncram:altsyncram_component|altsyncram_v224:auto_generated
+ 17. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|VAPOREON_ROM:VAPOREON_SP|altsyncram:altsyncram_component|altsyncram_l624:auto_generated
+ 18. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|SANDSLASH_ROM:SANDSLASH_SP|altsyncram:altsyncram_component|altsyncram_c924:auto_generated
+ 19. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ODDISH_ROM:ODDISH_SP|altsyncram:altsyncram_component|altsyncram_6v14:auto_generated
+ 20. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LAPRAS_ROM:LAPRAS_SP|altsyncram:altsyncram_component|altsyncram_ev14:auto_generated
+ 21. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|JOLTEON_ROM:JOLTEON_SP|altsyncram:altsyncram_component|altsyncram_6324:auto_generated
+ 22. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|GARCHOMP_ROM:GARCHOMP_SP|altsyncram:altsyncram_component|altsyncram_s524:auto_generated
+ 23. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|FLAREON_ROM:FLAREON_SP|altsyncram:altsyncram_component|altsyncram_i224:auto_generated
+ 24. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|CHARIZARD_ROM:CHARIZARD_SP|altsyncram:altsyncram_component|altsyncram_3924:auto_generated
+ 25. Source assignments for pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|RANDOM_ROM:RANDOM_SP|altsyncram:altsyncram_component|altsyncram_cv14:auto_generated
+ 26. Source assignments for pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP|altsyncram:altsyncram_component|altsyncram_cb34:auto_generated
+ 27. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C0
+ 28. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C1
+ 29. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM
+ 30. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM
+ 31. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM
+ 32. Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM
+ 33. Parameter Settings for User Entity Instance: PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst|altera_pll:altera_pll_i
+ 34. Parameter Settings for User Entity Instance: image_sync:SYNC_BLOCK|contador_uni:H_COUNTER
+ 35. Parameter Settings for User Entity Instance: image_sync:SYNC_BLOCK|contador_uni:V_COUNTER
+ 36. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ZERAORA_ROM:ZERAORA_SP|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|VAPOREON_ROM:VAPOREON_SP|altsyncram:altsyncram_component
+ 39. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|SANDSLASH_ROM:SANDSLASH_SP|altsyncram:altsyncram_component
+ 40. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|ODDISH_ROM:ODDISH_SP|altsyncram:altsyncram_component
+ 41. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LAPRAS_ROM:LAPRAS_SP|altsyncram:altsyncram_component
+ 42. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|JOLTEON_ROM:JOLTEON_SP|altsyncram:altsyncram_component
+ 43. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|GARCHOMP_ROM:GARCHOMP_SP|altsyncram:altsyncram_component
+ 44. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|FLAREON_ROM:FLAREON_SP|altsyncram:altsyncram_component
+ 45. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|CHARIZARD_ROM:CHARIZARD_SP|altsyncram:altsyncram_component
+ 46. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|RANDOM_ROM:RANDOM_SP|altsyncram:altsyncram_component
+ 47. Parameter Settings for User Entity Instance: pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP|altsyncram:altsyncram_component
+ 48. Parameter Settings for Inferred Entity Instance: pixel_generate:COLOR_BLOCK|lpm_divide:Div0
+ 49. Parameter Settings for Inferred Entity Instance: pixel_generate:COLOR_BLOCK|lpm_divide:Div1
+ 50. altsyncram Parameter Settings by Entity Instance
+ 51. Port Connectivity Checks: "pixel_generate:COLOR_BLOCK"
+ 52. Port Connectivity Checks: "image_sync:SYNC_BLOCK|contador_uni:V_COUNTER"
+ 53. Port Connectivity Checks: "image_sync:SYNC_BLOCK|contador_uni:H_COUNTER"
+ 54. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM"
+ 55. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM"
+ 56. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM"
+ 57. Port Connectivity Checks: "move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM"
+ 58. Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C1"
+ 59. Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C0"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
 
 
 
@@ -92,13 +94,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 11 00:46:18 2026           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 12 09:36:43 2026           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; VGA                                             ;
 ; Top-level Entity Name           ; VGA                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 523                                             ;
+; Total registers                 ; 576                                             ;
 ; Total pins                      ; 41                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 1,245,184                                       ;
@@ -299,16 +301,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                      ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 856                                                                                        ;
+; Estimate of Logic utilization (ALMs needed) ; 918                                                                                        ;
 ;                                             ;                                                                                            ;
-; Combinational ALUT usage for logic          ; 1516                                                                                       ;
+; Combinational ALUT usage for logic          ; 1605                                                                                       ;
 ;     -- 7 input functions                    ; 0                                                                                          ;
-;     -- 6 input functions                    ; 165                                                                                        ;
-;     -- 5 input functions                    ; 387                                                                                        ;
-;     -- 4 input functions                    ; 210                                                                                        ;
-;     -- <=3 input functions                  ; 754                                                                                        ;
+;     -- 6 input functions                    ; 202                                                                                        ;
+;     -- 5 input functions                    ; 399                                                                                        ;
+;     -- 4 input functions                    ; 216                                                                                        ;
+;     -- <=3 input functions                  ; 788                                                                                        ;
 ;                                             ;                                                                                            ;
-; Dedicated logic registers                   ; 523                                                                                        ;
+; Dedicated logic registers                   ; 576                                                                                        ;
 ;                                             ;                                                                                            ;
 ; I/O pins                                    ; 41                                                                                         ;
 ; Total MLAB memory bits                      ; 0                                                                                          ;
@@ -320,9 +322,9 @@ on the Quartus Prime software download page.
 ;     -- PLLs                                 ; 1                                                                                          ;
 ;                                             ;                                                                                            ;
 ; Maximum fan-out node                        ; PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 786                                                                                        ;
-; Total fan-out                               ; 12191                                                                                      ;
-; Average fan-out                             ; 5.16                                                                                       ;
+; Maximum fan-out                             ; 859                                                                                        ;
+; Total fan-out                               ; 12739                                                                                      ;
+; Average fan-out                             ; 5.09                                                                                       ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------+
 
 
@@ -331,14 +333,24 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                ; Entity Name     ; Library Name ;
 +---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |VGA                                                    ; 1516 (2)            ; 523 (0)                   ; 1245184           ; 0          ; 41   ; 0            ; |VGA                                                                                                                                               ; VGA             ; work         ;
+; |VGA                                                    ; 1605 (2)            ; 576 (0)                   ; 1245184           ; 0          ; 41   ; 0            ; |VGA                                                                                                                                               ; VGA             ; work         ;
 ;    |PLL_40MHz:CLOCK_BLOCK|                              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PLL_40MHz:CLOCK_BLOCK                                                                                                                         ; PLL_40MHz       ; pll_40mhz    ;
 ;       |PLL_40MHz_0002:pll_40mhz_inst|                   ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst                                                                                           ; PLL_40MHz_0002  ; PLL_40MHz    ;
 ;          |altera_pll:altera_pll_i|                      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst|altera_pll:altera_pll_i                                                                   ; altera_pll      ; work         ;
 ;    |image_sync:SYNC_BLOCK|                              ; 35 (8)              ; 22 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |VGA|image_sync:SYNC_BLOCK                                                                                                                         ; image_sync      ; work         ;
 ;       |contador_uni:H_COUNTER|                          ; 14 (14)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|image_sync:SYNC_BLOCK|contador_uni:H_COUNTER                                                                                                  ; contador_uni    ; work         ;
 ;       |contador_uni:V_COUNTER|                          ; 13 (13)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|image_sync:SYNC_BLOCK|contador_uni:V_COUNTER                                                                                                  ; contador_uni    ; work         ;
-;    |move_controller:MOVE_CONT|                          ; 81 (32)             ; 48 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT                                                                                                                     ; move_controller ; work         ;
+;    |move_controller:MOVE_CONT|                          ; 170 (66)            ; 101 (57)                  ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT                                                                                                                     ; move_controller ; work         ;
+;       |bitn_fullAdder:POS0_X_SUM|                       ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM                                                                                           ; bitn_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:10:fullAdder_i| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:10:fullAdder_i                                              ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:2:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:2:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:3:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:3:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:4:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:4:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:5:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:5:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:6:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:6:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:7:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:7:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:8:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:8:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:9:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:\fullAdderLoop:9:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;       |bitn_fullAdder:POS0_Y_SUM|                       ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM                                                                                           ; bitn_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:10:fullAdder_i| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM|bit1_fullAdder:\fullAdderLoop:10:fullAdder_i                                              ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:2:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM|bit1_fullAdder:\fullAdderLoop:2:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
@@ -349,6 +361,16 @@ on the Quartus Prime software download page.
 ;          |bit1_fullAdder:\fullAdderLoop:7:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM|bit1_fullAdder:\fullAdderLoop:7:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:8:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM|bit1_fullAdder:\fullAdderLoop:8:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:9:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS0_Y_SUM|bit1_fullAdder:\fullAdderLoop:9:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;       |bitn_fullAdder:POS1_X_SUM|                       ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM                                                                                           ; bitn_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:10:fullAdder_i| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:10:fullAdder_i                                              ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:2:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:2:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:3:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:3:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:4:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:4:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:5:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:5:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:6:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:6:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:7:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:7:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:8:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:8:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
+;          |bit1_fullAdder:\fullAdderLoop:9:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_X_SUM|bit1_fullAdder:\fullAdderLoop:9:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;       |bitn_fullAdder:POS1_Y_SUM|                       ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM                                                                                           ; bitn_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:10:fullAdder_i| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM|bit1_fullAdder:\fullAdderLoop:10:fullAdder_i                                              ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:2:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM|bit1_fullAdder:\fullAdderLoop:2:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
@@ -359,7 +381,8 @@ on the Quartus Prime software download page.
 ;          |bit1_fullAdder:\fullAdderLoop:7:fullAdder_i|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM|bit1_fullAdder:\fullAdderLoop:7:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:8:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM|bit1_fullAdder:\fullAdderLoop:8:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
 ;          |bit1_fullAdder:\fullAdderLoop:9:fullAdder_i|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|bitn_fullAdder:POS1_Y_SUM|bit1_fullAdder:\fullAdderLoop:9:fullAdder_i                                               ; bit1_fullAdder  ; work         ;
-;       |contador_uni:REFRESH_C|                          ; 27 (27)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|contador_uni:REFRESH_C                                                                                              ; contador_uni    ; work         ;
+;       |contador_uni:REFRESH_C0|                         ; 30 (30)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|contador_uni:REFRESH_C0                                                                                             ; contador_uni    ; work         ;
+;       |contador_uni:REFRESH_C1|                         ; 30 (30)             ; 22 (22)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA|move_controller:MOVE_CONT|contador_uni:REFRESH_C1                                                                                             ; contador_uni    ; work         ;
 ;    |pixel_generate:COLOR_BLOCK|                         ; 1398 (274)          ; 453 (449)                 ; 1245184           ; 0          ; 0    ; 0            ; |VGA|pixel_generate:COLOR_BLOCK                                                                                                                    ; pixel_generate  ; work         ;
 ;       |BACKGROUND_ROM:BACKGROUND_SP|                    ; 4 (0)               ; 4 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |VGA|pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP                                                                                       ; BACKGROUND_ROM  ; work         ;
 ;          |altsyncram:altsyncram_component|              ; 4 (0)               ; 4 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |VGA|pixel_generate:COLOR_BLOCK|BACKGROUND_ROM:BACKGROUND_SP|altsyncram:altsyncram_component                                                       ; altsyncram      ; work         ;
@@ -454,38 +477,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                   ;
-+---------------------------------------------------+--------------------------------------------------+
-; Register name                                     ; Reason for Removal                               ;
-+---------------------------------------------------+--------------------------------------------------+
-; pixel_generate:COLOR_BLOCK|R[0..2]                ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|G[0,1]                 ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|B[0..2]                ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|Y_REG[11..30]          ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|X_REG[11..30]          ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|X_REG[31]              ; Merged with pixel_generate:COLOR_BLOCK|Y_REG[31] ;
-; move_controller:MOVE_CONT|VARP1_X[0]              ; Merged with move_controller:MOVE_CONT|VARP0_X[0] ;
-; move_controller:MOVE_CONT|VARP0_X[0]              ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_Y[0]              ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_Y[0]              ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_X[1,2]            ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_X[3]              ; Stuck at VCC due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_X[4..8]           ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_X[9]              ; Stuck at VCC due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP1_X[10]             ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[1,2]            ; Stuck at VCC due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[3]              ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[4]              ; Stuck at VCC due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[5,6]            ; Stuck at GND due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[7]              ; Stuck at VCC due to stuck port data_in           ;
-; move_controller:MOVE_CONT|VARP0_X[8..10]          ; Stuck at GND due to stuck port data_in           ;
-; pixel_generate:COLOR_BLOCK|LOCAL_X_REG2_PK1[0..6] ; Lost fanout                                      ;
-; pixel_generate:COLOR_BLOCK|LOCAL_Y_REG2_PK1[0..6] ; Lost fanout                                      ;
-; pixel_generate:COLOR_BLOCK|LOCAL_X_REG2_PK0[0..6] ; Lost fanout                                      ;
-; pixel_generate:COLOR_BLOCK|LOCAL_Y_REG2_PK0[0..6] ; Lost fanout                                      ;
-; Total Number of Removed Registers = 101           ;                                                  ;
-+---------------------------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                     ;
++----------------------------------------------------+---------------------------------------------------+
+; Register name                                      ; Reason for Removal                                ;
++----------------------------------------------------+---------------------------------------------------+
+; pixel_generate:COLOR_BLOCK|R[0..2]                 ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|G[0,1]                  ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|B[0..2]                 ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|Y_REG[11..30]           ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|X_REG[11..30]           ; Stuck at GND due to stuck port data_in            ;
+; move_controller:MOVE_CONT|R_RATE1[0..5,9,18]       ; Stuck at GND due to stuck port data_in            ;
+; move_controller:MOVE_CONT|R_RATE0[0..5,9,18]       ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|X_REG[31]               ; Merged with pixel_generate:COLOR_BLOCK|Y_REG[31]  ;
+; move_controller:MOVE_CONT|R_RATE0[17]              ; Merged with move_controller:MOVE_CONT|R_RATE1[17] ;
+; move_controller:MOVE_CONT|R_RATE1[7,13..15,19..21] ; Merged with move_controller:MOVE_CONT|R_RATE1[12] ;
+; move_controller:MOVE_CONT|R_RATE1[6,8,11,16]       ; Merged with move_controller:MOVE_CONT|R_RATE1[10] ;
+; move_controller:MOVE_CONT|R_RATE0[7,13..15,19..21] ; Merged with move_controller:MOVE_CONT|R_RATE0[12] ;
+; move_controller:MOVE_CONT|R_RATE0[6,8,11,16]       ; Merged with move_controller:MOVE_CONT|R_RATE0[10] ;
+; move_controller:MOVE_CONT|VARP1_Y[0]               ; Stuck at GND due to stuck port data_in            ;
+; move_controller:MOVE_CONT|VARP0_X[0]               ; Stuck at GND due to stuck port data_in            ;
+; move_controller:MOVE_CONT|VARP0_Y[0]               ; Stuck at GND due to stuck port data_in            ;
+; move_controller:MOVE_CONT|VARP1_X[0]               ; Stuck at GND due to stuck port data_in            ;
+; pixel_generate:COLOR_BLOCK|LOCAL_X_REG2_PK1[0..6]  ; Lost fanout                                       ;
+; pixel_generate:COLOR_BLOCK|LOCAL_Y_REG2_PK1[0..6]  ; Lost fanout                                       ;
+; pixel_generate:COLOR_BLOCK|LOCAL_X_REG2_PK0[0..6]  ; Lost fanout                                       ;
+; pixel_generate:COLOR_BLOCK|LOCAL_Y_REG2_PK0[0..6]  ; Lost fanout                                       ;
+; Total Number of Removed Registers = 120            ;                                                   ;
++----------------------------------------------------+---------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++--------------------------------------+---------------------------+----------------------------------------------------------------------------+
+; Register name                        ; Reason for Removal        ; Registers Removed due to This Register                                     ;
++--------------------------------------+---------------------------+----------------------------------------------------------------------------+
+; move_controller:MOVE_CONT|R_RATE1[0] ; Stuck at GND              ; move_controller:MOVE_CONT|VARP1_Y[0], move_controller:MOVE_CONT|VARP1_X[0] ;
+;                                      ; due to stuck port data_in ;                                                                            ;
+; move_controller:MOVE_CONT|R_RATE0[0] ; Stuck at GND              ; move_controller:MOVE_CONT|VARP0_X[0], move_controller:MOVE_CONT|VARP0_Y[0] ;
+;                                      ; due to stuck port data_in ;                                                                            ;
++--------------------------------------+---------------------------+----------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -493,12 +524,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 523   ;
-; Number of registers using Synchronous Clear  ; 95    ;
+; Total registers                              ; 576   ;
+; Number of registers using Synchronous Clear  ; 117   ;
 ; Number of registers using Synchronous Load   ; 15    ;
-; Number of registers using Asynchronous Clear ; 44    ;
+; Number of registers using Asynchronous Clear ; 66    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Clock Enable       ; 39    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -540,12 +571,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA|image_sync:SYNC_BLOCK|contador_uni:V_COUNTER|temp[8] ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |VGA|pixel_generate:COLOR_BLOCK|R[4]                      ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux269 ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux124 ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 112 LEs              ; 48 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux290 ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 112 LEs              ; 48 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux137 ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |VGA|image_sync:SYNC_BLOCK|contador_uni:V_COUNTER|temp[5] ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |VGA|pixel_generate:COLOR_BLOCK|R[3]                      ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux270 ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux127 ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 112 LEs              ; 48 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux285 ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 112 LEs              ; 48 LEs                 ; No         ; |VGA|pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|Mux146 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
@@ -657,23 +688,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: move_controller:MOVE_CONT ;
-+----------------+----------+--------------------------------------------+
-; Parameter Name ; Value    ; Type                                       ;
-+----------------+----------+--------------------------------------------+
-; refresh_rate   ; 50000000 ; Signed Integer                             ;
-+----------------+----------+--------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C0 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 22    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C ;
-+----------------+-------+----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                 ;
-+----------------+-------+----------------------------------------------------------------------+
-; n              ; 22    ; Signed Integer                                                       ;
-+----------------+-------+----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: move_controller:MOVE_CONT|contador_uni:REFRESH_C1 ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 22    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1962,7 +1993,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1984,31 +2015,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
-; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C"                                          ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; ena         ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; syn_clr     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; ini         ; Input  ; Info     ; Stuck at GND                                                                        ;
-; up          ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; max[21..19] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; max[15..12] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; max[11..8]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[6..0]   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[18]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[17]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; max[16]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; max[7]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; counter     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C1"                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; ena     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; syn_clr ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ini     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; up      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; counter ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "move_controller:MOVE_CONT|contador_uni:REFRESH_C0"                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; ena     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; syn_clr ; Input  ; Info     ; Stuck at GND                                                                        ;
+; ini     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; up      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; counter ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -2016,39 +2052,39 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 523                         ;
-;     CLR SCLR          ; 33                          ;
-;     ENA               ; 24                          ;
+; arriav_ff             ; 576                         ;
+;     CLR SCLR          ; 55                          ;
+;     ENA               ; 28                          ;
 ;     ENA CLR SCLR      ; 11                          ;
 ;     SCLR              ; 51                          ;
 ;     SLD               ; 15                          ;
-;     plain             ; 389                         ;
-; arriav_lcell_comb     ; 1516                        ;
-;     arith             ; 491                         ;
+;     plain             ; 416                         ;
+; arriav_lcell_comb     ; 1605                        ;
+;     arith             ; 513                         ;
 ;         0 data inputs ; 62                          ;
-;         1 data inputs ; 229                         ;
+;         1 data inputs ; 251                         ;
 ;         2 data inputs ; 26                          ;
 ;         3 data inputs ; 62                          ;
 ;         4 data inputs ; 112                         ;
-;     normal            ; 861                         ;
+;     normal            ; 928                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 23                          ;
-;         2 data inputs ; 177                         ;
-;         3 data inputs ; 10                          ;
-;         4 data inputs ; 98                          ;
-;         5 data inputs ; 387                         ;
-;         6 data inputs ; 165                         ;
+;         1 data inputs ; 25                          ;
+;         2 data inputs ; 183                         ;
+;         3 data inputs ; 14                          ;
+;         4 data inputs ; 104                         ;
+;         5 data inputs ; 399                         ;
+;         6 data inputs ; 202                         ;
 ;     shared            ; 164                         ;
 ;         0 data inputs ; 81                          ;
-;         1 data inputs ; 42                          ;
-;         2 data inputs ; 40                          ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 60                          ;
 ;         3 data inputs ; 1                           ;
 ; boundary_port         ; 41                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 240                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 73.40                       ;
-; Average LUT depth     ; 24.40                       ;
+; Average LUT depth     ; 23.35                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2067,7 +2103,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon May 11 00:46:02 2026
+    Info: Processing started: Tue May 12 09:36:29 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA -c VGA
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -2075,7 +2111,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file pokemon
     Info (12022): Found design unit 1: pokemon_sel-main File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/pokemon_sel.vhd Line: 21
     Info (12023): Found entity 1: pokemon_sel File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/pokemon_sel.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file move_controller.vhd
-    Info (12022): Found design unit 1: move_controller-sinchronous File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 27
+    Info (12022): Found design unit 1: move_controller-sinchronous File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 23
     Info (12023): Found entity 1: move_controller File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bit1_fullAdder.vhd
     Info (12022): Found design unit 1: bit1_fullAdder-mux_sumador File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/bit1_fullAdder.vhd Line: 14
@@ -2144,18 +2180,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file BACKGRO
     Info (12023): Found entity 1: BACKGROUND_ROM File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/BACKGROUND_ROM.vhd Line: 43
 Info (12127): Elaborating entity "VGA" for the top level hierarchy
 Info (12128): Elaborating entity "move_controller" for hierarchy "move_controller:MOVE_CONT" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 46
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(28): used explicit default value for signal "I_POS0_X_INT" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 28
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(29): used explicit default value for signal "I_POS0_Y_INT" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 29
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(30): used explicit default value for signal "I_POS1_X_INT" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 30
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(31): used explicit default value for signal "I_POS1_Y_INT" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 31
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(36): used explicit default value for signal "POS0_X_RST" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 36
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(38): used explicit default value for signal "POS1_X_RST" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 38
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(48): used explicit default value for signal "MV0_X" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 48
-Warning (10540): VHDL Signal Declaration warning at move_controller.vhd(50): used explicit default value for signal "MV1_X" because signal was never assigned a value File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 50
-Info (12128): Elaborating entity "contador_uni" for hierarchy "move_controller:MOVE_CONT|contador_uni:REFRESH_C" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 147
-Info (12128): Elaborating entity "bitn_fullAdder" for hierarchy "move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 225
+Info (12128): Elaborating entity "contador_uni" for hierarchy "move_controller:MOVE_CONT|contador_uni:REFRESH_C0" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 203
+Info (12128): Elaborating entity "bitn_fullAdder" for hierarchy "move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/move_controller.vhd Line: 298
 Info (12128): Elaborating entity "bit1_fullAdder" for hierarchy "move_controller:MOVE_CONT|bitn_fullAdder:POS0_X_SUM|bit1_fullAdder:fullAdder0" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/bitn_fullAdder.vhd Line: 21
-Info (12128): Elaborating entity "PLL_40MHz" for hierarchy "PLL_40MHz:CLOCK_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 72
+Info (12128): Elaborating entity "PLL_40MHz" for hierarchy "PLL_40MHz:CLOCK_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 68
 Info (12128): Elaborating entity "PLL_40MHz_0002" for hierarchy "PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/PLL_40MHz.vhd Line: 32
 Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pll_40mhz_inst|altera_pll:altera_pll_i" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/PLL_40MHz/PLL_40MHz_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
@@ -2221,9 +2249,9 @@ Info (12133): Instantiated megafunction "PLL_40MHz:CLOCK_BLOCK|PLL_40MHz_0002:pl
     Info (12134): Parameter "duty_cycle17" = "50"
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
-Info (12128): Elaborating entity "image_sync" for hierarchy "image_sync:SYNC_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 81
+Info (12128): Elaborating entity "image_sync" for hierarchy "image_sync:SYNC_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 77
 Info (12128): Elaborating entity "contador_uni" for hierarchy "image_sync:SYNC_BLOCK|contador_uni:H_COUNTER" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/image_sync.vhd Line: 64
-Info (12128): Elaborating entity "pixel_generate" for hierarchy "pixel_generate:COLOR_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 93
+Info (12128): Elaborating entity "pixel_generate" for hierarchy "pixel_generate:COLOR_BLOCK" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 89
 Info (12128): Elaborating entity "pokemon_sel" for hierarchy "pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/pixel_generate.vhd Line: 75
 Info (12128): Elaborating entity "LEAFEON_ROM" for hierarchy "pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/pokemon_sel.vhd Line: 430
 Info (12128): Elaborating entity "altsyncram" for hierarchy "pixel_generate:COLOR_BLOCK|pokemon_sel:PK_SEL|LEAFEON_ROM:LEAFEON_SP|altsyncram:altsyncram_component" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/LEAFEON_ROM.vhd Line: 70
@@ -2958,16 +2986,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "LEFT_SIG" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 15
     Warning (15610): No output dependent on input pin "RIGHT_SIG" File: /home/griznu1_/Nextcloud/ERR/UNI/5semestre/digitales/labs/7lab_VGA/codigo/VGA.vhd Line: 16
-Info (21057): Implemented 2056 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2148 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 14 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 1774 logic cells
+    Info (21061): Implemented 1866 logic cells
     Info (21064): Implemented 240 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 584 megabytes
-    Info: Processing ended: Mon May 11 00:46:18 2026
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 570 megabytes
+    Info: Processing ended: Tue May 12 09:36:43 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:27
 
 

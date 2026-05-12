@@ -44,10 +44,6 @@ SIGNAL POS_Y        : UINT11  ;
 BEGIN
 	
 	MOVE_CONT : ENTITY WORK.move_controller
-	GENERIC MAP
-	(
-		REFRESH_RATE => 50000000
-	)
 	PORT MAP
 	(
 		CLK           => CLK_40MHz ,

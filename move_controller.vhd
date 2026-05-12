@@ -5,10 +5,6 @@ USE IEEE.VGA_package.ALL   ;
 USE WORK.basic_package.ALL;
 ------------------------------------------------------
 ENTITY move_controller IS
-	GENERIC
-	(
-		REFRESH_RATE : INTEGER := 500000
-	);
 	PORT
 	(
 		CLK          : IN  UINT01;
@@ -25,35 +21,42 @@ ENTITY move_controller IS
 END ENTITY move_controller;
 ------------------------------------------------------
 ARCHITECTURE sinchronous OF move_controller IS
-SIGNAL I_POS0_X_INT : INTEGER := 150;
-SIGNAL I_POS0_Y_INT : INTEGER := 400;
-SIGNAL I_POS1_X_INT : INTEGER := 520;
-SIGNAL I_POS1_Y_INT : INTEGER := 260;
-SIGNAL I_POS0_X_SLV : UINT11        ;
-SIGNAL I_POS0_Y_SLV : UINT11        ;
-SIGNAL I_POS1_X_SLV : UINT11        ;
-SIGNAL I_POS1_Y_SLV : UINT11        ;
-SIGNAL POS0_X_RST   : UINT01 := '0' ;
-SIGNAL POS0_Y_RST   : UINT01 := '0' ;
-SIGNAL POS1_X_RST   : UINT01 := '0' ;
-SIGNAL POS1_Y_RST   : UINT01 := '0' ;
-SIGNAL VARP0_X      : UINT11        ;
-SIGNAL VARP0_Y      : UINT11        ;
-SIGNAL VARP1_X      : UINT11        ;
-SIGNAL VARP1_Y      : UINT11        ;
-SIGNAL LR0_OP       : UINT11        ;
-SIGNAL UD0_OP       : UINT11        ;
-SIGNAL LR1_OP       : UINT11        ;
-SIGNAL UD1_OP       : UINT11        ;
-SIGNAL MV0_X        : UINT02 := "00";
-SIGNAL MV0_Y        : UINT02 := "00";
-SIGNAL MV1_X        : UINT02 := "00";
-SIGNAL MV1_Y        : UINT02 := "00";
-SIGNAL P0_FF_X      : UINT11        ;
-SIGNAL P0_FF_Y      : UINT11        ;
-SIGNAL P1_FF_X      : UINT11        ;
-SIGNAL P1_FF_Y      : UINT11        ;
-SIGNAL REFRESH_FLAG : UINT01        ;
+CONSTANT I_POS0_X_INT  : INTEGER := 150     ;
+CONSTANT I_POS0_Y_INT  : INTEGER := 400     ;
+CONSTANT I_POS1_X_INT  : INTEGER := 540     ;
+CONSTANT I_POS1_Y_INT  : INTEGER := 230     ;
+SIGNAL   I_POS0_X_SLV  : UINT11             ;
+SIGNAL   I_POS0_Y_SLV  : UINT11             ;
+SIGNAL   I_POS1_X_SLV  : UINT11             ;
+SIGNAL   I_POS1_Y_SLV  : UINT11             ;
+SIGNAL   POS0_X_RST    : UINT01 := '0'      ;
+SIGNAL   POS0_Y_RST    : UINT01 := '0'      ;
+SIGNAL   POS1_X_RST    : UINT01 := '0'      ;
+SIGNAL   POS1_Y_RST    : UINT01 := '0'      ;
+SIGNAL   VARP0_X       : UINT11             ;
+SIGNAL   VARP0_Y       : UINT11             ;
+SIGNAL   VARP1_X       : UINT11             ;
+SIGNAL   VARP1_Y       : UINT11             ;
+SIGNAL   LR0_OP        : UINT11             ;
+SIGNAL   UD0_OP        : UINT11             ;
+SIGNAL   LR1_OP        : UINT11             ;
+SIGNAL   UD1_OP        : UINT11             ;
+SIGNAL   MV0_X         : UINT02 := "00"     ;
+SIGNAL   MV0_Y         : UINT02 := "00"     ;
+SIGNAL   MV1_X         : UINT02 := "00"     ;
+SIGNAL   MV1_Y         : UINT02 := "00"     ;
+SIGNAL   P0_FF_X       : UINT11             ;
+SIGNAL   P0_FF_Y       : UINT11             ;
+SIGNAL   P1_FF_X       : UINT11             ;
+SIGNAL   P1_FF_Y       : UINT11             ;
+SIGNAL   ANIM_CONTR0   : UINT01             ;
+SIGNAL   ANIM_CONTR1   : UINT01             ;
+SIGNAL   R_RATE0       : INTEGER := 0       ;
+SIGNAL   R_RATE1       : INTEGER := 0       ;
+SIGNAL   REFRESH_FLAG0 : UINT01             ;
+SIGNAL   REFRESH_FLAG1 : UINT01             ;
+CONSTANT REFRESH_RATE  : INTEGER := 50000000;
+CONSTANT H_R_RATE      : INTEGER := 200000 ;
 BEGIN
 	
 	SP0_X <= VARP0_X;
@@ -66,12 +69,21 @@ BEGIN
 	I_POS1_X_SLV <= Int2Slv(I_POS1_X_INT, 11);
 	I_POS1_Y_SLV <= Int2Slv(I_POS1_Y_INT, 11);
 	
+	WITH PK0_MOV_CONT SELECT
+		ANIM_CONTR0  <= '0' WHEN '1',
+					    '1' WHEN OTHERS;
+	WITH PK1_MOV_CONT SELECT
+		ANIM_CONTR1  <= '0' WHEN '1',
+					    '1' WHEN OTHERS;
+	
 	PROCESS(CLK)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
-			CASE PK0_MOV_CONT IS
+			CASE ANIM_CONTR0 IS
 				WHEN '0'    =>
-					CASE (REFRESH_FLAG & MV0_Y) IS
+					R_RATE0 <= REFRESH_RATE;
+					POS0_X_RST <= '1'      ;
+					CASE (REFRESH_FLAG0 & MV0_Y) IS
 						WHEN "000" => NULL;
 							
 						WHEN "100" =>
@@ -92,12 +104,35 @@ BEGIN
 							POS0_Y_RST <=   '0';
 					END CASE;
 				WHEN OTHERS => 
+					R_RATE0 <= H_R_RATE;
 					MV0_Y      <= "00";
 					POS0_Y_RST <=  '1';
+					CASE (REFRESH_FLAG0 & MV0_X) IS
+						WHEN "000" => NULL;
+						
+						WHEN "100" =>
+							MV0_X      <= "01";
+							POS0_X_RST <=  '0';
+						WHEN "001" => NULL;
+						
+						WHEN "101" =>
+							MV0_X      <= "10";
+							POS0_X_RST <=  '0';
+						WHEN "010" => NULL;
+						
+						WHEN "110" =>
+							MV0_X      <= "00";
+							POS0_X_RST <=  '0';
+						WHEN OTHERS =>
+							MV0_X      <= "00";
+							POS0_X_RST <=  '0';
+					END CASE;
 			END CASE;
-			CASE PK1_MOV_CONT IS
+			CASE ANIM_CONTR1 IS
 				WHEN '0'    =>
-					CASE (REFRESH_FLAG & MV1_Y) IS
+					R_RATE1 <= REFRESH_RATE;
+					POS1_X_RST <= '1'      ;
+					CASE (REFRESH_FLAG1 & MV1_Y) IS
 						WHEN "000" => NULL;
 							
 						WHEN "100" =>
@@ -118,8 +153,29 @@ BEGIN
 							POS1_Y_RST <=   '0';
 					END CASE;
 				WHEN OTHERS =>
+					R_RATE1 <= H_R_RATE;
 					MV1_Y      <= "00";
 					POS1_Y_RST <=  '1';
+					CASE (REFRESH_FLAG1 & MV1_X) IS
+						WHEN "000" => NULL;
+						
+						WHEN "100" =>
+							MV1_X      <= "01";
+							POS1_X_RST <=  '0';
+						WHEN "001" => NULL;
+						
+						WHEN "101" =>
+							MV1_X      <= "10";
+							POS1_X_RST <=  '0';
+						WHEN "010" => NULL;
+						
+						WHEN "110" =>
+							MV1_X      <= "00";
+							POS1_X_RST <=  '0';
+						WHEN OTHERS =>
+							MV1_X      <= "00";
+							POS1_X_RST <=  '0';
+					END CASE;
 			END CASE;
 		END IF;
 	END PROCESS;
@@ -144,7 +200,7 @@ BEGIN
 				  "11111110110"   WHEN "10"  ,
 				  (OTHERS => '0') WHEN OTHERS;
 	
-	REFRESH_C : ENTITY WORK.contador_uni
+	REFRESH_C0 : ENTITY WORK.contador_uni
 	GENERIC MAP
 	(
 		N => 22
@@ -157,18 +213,35 @@ BEGIN
 		syn_clr  => '0'                      ,
 		ini      => Int2Slv(0, 22)           ,
 		up       => '1'                      ,
-		max      => Int2Slv(REFRESH_RATE, 22),
-		max_tick => REFRESH_FLAG             ,
+		max      => Int2Slv(R_RATE0, 22)     ,
+		max_tick => REFRESH_FLAG0            ,
+		counter  => OPEN
+	);
+	REFRESH_C1 : ENTITY WORK.contador_uni
+	GENERIC MAP
+	(
+		N => 22
+	)
+	PORT MAP
+	(
+		clk      => CLK                      ,
+		rst      => RST                      ,
+		ena      => '1'                      ,
+		syn_clr  => '0'                      ,
+		ini      => Int2Slv(0, 22)           ,
+		up       => '1'                      ,
+		max      => Int2Slv(R_RATE1, 22)     ,
+		max_tick => REFRESH_FLAG1            ,
 		counter  => OPEN
 	);
 	
-	PROCESS(CLK, REFRESH_FLAG)
+	PROCESS(CLK, REFRESH_FLAG0)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
 			IF (RST = '1') OR (POS0_X_RST = '1') THEN
 				VARP0_X <= I_POS0_X_SLV;
 			ELSE
-				IF REFRESH_FLAG = '1' THEN
+				IF REFRESH_FLAG0 = '1' THEN
 					VARP0_X     <= P0_FF_X;
 				ELSE
 					VARP0_X <= VARP0_X;
@@ -177,13 +250,13 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	PROCESS(CLK, REFRESH_FLAG)
+	PROCESS(CLK, REFRESH_FLAG0)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
 			IF (RST = '1') OR (POS0_Y_RST = '1') THEN
 				VARP0_Y <= I_POS0_Y_SLV;
 			ELSE
-				IF REFRESH_FLAG = '1' THEN
+				IF REFRESH_FLAG0 = '1' THEN
 					VARP0_Y     <= P0_FF_Y;
 				ELSE
 					VARP0_Y <= VARP0_Y;
@@ -192,13 +265,13 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	PROCESS(CLK, REFRESH_FLAG)
+	PROCESS(CLK, REFRESH_FLAG1)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
 			IF (RST = '1') OR (POS1_X_RST = '1') THEN
 				VARP1_X <= I_POS1_X_SLV;
 			ELSE
-				IF REFRESH_FLAG = '1' THEN
+				IF REFRESH_FLAG1 = '1' THEN
 					VARP1_X     <= P1_FF_X;
 				ELSE
 					VARP1_X <= VARP1_X;
@@ -207,13 +280,13 @@ BEGIN
 		END IF;
 	END PROCESS;
 	
-	PROCESS(CLK, REFRESH_FLAG)
+	PROCESS(CLK, REFRESH_FLAG1)
 	BEGIN
 		IF RISING_EDGE(CLK) THEN
 			IF (RST = '1') OR (POS1_Y_RST = '1') THEN
 				VARP1_Y <= I_POS1_Y_SLV;
 			ELSE
-				IF REFRESH_FLAG = '1' THEN
+				IF REFRESH_FLAG1 = '1' THEN
 					VARP1_Y     <= P1_FF_Y;
 				ELSE
 					VARP1_Y <= VARP1_Y;
